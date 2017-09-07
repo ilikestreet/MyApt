@@ -3,15 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict>
-		<key>myApt.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-	</dict>
+	<dict/>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>759D2FE31F60E4CB000A219B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>75C4DAF31EAD584800337FA5</key>
 		<dict>
 			<key>primary</key>

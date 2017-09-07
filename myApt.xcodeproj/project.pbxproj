@@ -7,35 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7506C8691EAD594E00569EB1 /* LogCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7506C8681EAD594E00569EB1 /* LogCollectionViewController.swift */; };
-		7506C86B1EAD595300569EB1 /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7506C86A1EAD595300569EB1 /* SwitchViewController.swift */; };
-		7506C86D1EAD5A0B00569EB1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7506C86C1EAD5A0B00569EB1 /* GoogleService-Info.plist */; };
-		75C4DAF81EAD584800337FA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C4DAF71EAD584800337FA5 /* AppDelegate.swift */; };
-		75C4DAFF1EAD584800337FA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C4DAFE1EAD584800337FA5 /* Assets.xcassets */; };
-		75C4DB021EAD584800337FA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C4DB001EAD584800337FA5 /* LaunchScreen.storyboard */; };
-		7DC6A407F0B1B6B675B9C8AB /* Pods_myApt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4706DE6D4C37C129F5DE6691 /* Pods_myApt.framework */; };
+		759D2FE61F60E4CB000A219B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C4DAF71EAD584800337FA5 /* AppDelegate.swift */; };
+		759D2FE71F60E4CB000A219B /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7506C86A1EAD595300569EB1 /* SwitchViewController.swift */; };
+		759D2FE81F60E4CB000A219B /* LogCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7506C8681EAD594E00569EB1 /* LogCollectionViewController.swift */; };
+		759D2FEC1F60E4CB000A219B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C4DB001EAD584800337FA5 /* LaunchScreen.storyboard */; };
+		759D2FED1F60E4CB000A219B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C4DAFE1EAD584800337FA5 /* Assets.xcassets */; };
+		759D2FEE1F60E4CB000A219B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7506C86C1EAD5A0B00569EB1 /* GoogleService-Info.plist */; };
+		B03DE19606119E9805F2C1A7 /* Pods_MyApt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D251F78E7C5209A2A90F70B /* Pods_MyApt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D251F78E7C5209A2A90F70B /* Pods_MyApt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyApt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4706DE6D4C37C129F5DE6691 /* Pods_myApt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myApt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F674261C1453CEFC2E01C18 /* Pods-MyApt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApt.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyApt/Pods-MyApt.release.xcconfig"; sourceTree = "<group>"; };
 		7506C8681EAD594E00569EB1 /* LogCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCollectionViewController.swift; sourceTree = "<group>"; };
 		7506C86A1EAD595300569EB1 /* SwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
 		7506C86C1EAD5A0B00569EB1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		75C4DAF41EAD584800337FA5 /* myApt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myApt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		759D2FF41F60E4CB000A219B /* MyApt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C4DAF71EAD584800337FA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75C4DAFE1EAD584800337FA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75C4DB011EAD584800337FA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75C4DB031EAD584800337FA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		929D4734D2435C7159E2F2BA /* Pods-MyApt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyApt/Pods-MyApt.debug.xcconfig"; sourceTree = "<group>"; };
 		ABA36F73C9F3BC3A75CC3C1D /* Pods-myApt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myApt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myApt/Pods-myApt.debug.xcconfig"; sourceTree = "<group>"; };
 		E017781B408644E76DDDC30C /* Pods-myApt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myApt.release.xcconfig"; path = "Pods/Target Support Files/Pods-myApt/Pods-myApt.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		75C4DAF11EAD584800337FA5 /* Frameworks */ = {
+		759D2FE91F60E4CB000A219B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DC6A407F0B1B6B675B9C8AB /* Pods_myApt.framework in Frameworks */,
+				B03DE19606119E9805F2C1A7 /* Pods_MyApt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				4706DE6D4C37C129F5DE6691 /* Pods_myApt.framework */,
+				1D251F78E7C5209A2A90F70B /* Pods_MyApt.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -53,7 +57,7 @@
 		75C4DAEB1EAD584800337FA5 = {
 			isa = PBXGroup;
 			children = (
-				75C4DAF61EAD584800337FA5 /* myApt */,
+				75C4DAF61EAD584800337FA5 /* MyApt */,
 				75C4DAF51EAD584800337FA5 /* Products */,
 				838DF7F3B1175C2E869A42D4 /* Pods */,
 				6B6649BFD4CBA4107AD9F401 /* Frameworks */,
@@ -63,12 +67,12 @@
 		75C4DAF51EAD584800337FA5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				75C4DAF41EAD584800337FA5 /* myApt.app */,
+				759D2FF41F60E4CB000A219B /* MyApt.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		75C4DAF61EAD584800337FA5 /* myApt */ = {
+		75C4DAF61EAD584800337FA5 /* MyApt */ = {
 			isa = PBXGroup;
 			children = (
 				75C4DAF71EAD584800337FA5 /* AppDelegate.swift */,
@@ -79,6 +83,7 @@
 				75C4DB031EAD584800337FA5 /* Info.plist */,
 				7506C86C1EAD5A0B00569EB1 /* GoogleService-Info.plist */,
 			);
+			name = MyApt;
 			path = myApt;
 			sourceTree = "<group>";
 		};
@@ -87,6 +92,8 @@
 			children = (
 				ABA36F73C9F3BC3A75CC3C1D /* Pods-myApt.debug.xcconfig */,
 				E017781B408644E76DDDC30C /* Pods-myApt.release.xcconfig */,
+				929D4734D2435C7159E2F2BA /* Pods-MyApt.debug.xcconfig */,
+				5F674261C1453CEFC2E01C18 /* Pods-MyApt.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -94,24 +101,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		75C4DAF31EAD584800337FA5 /* myApt */ = {
+		759D2FE31F60E4CB000A219B /* MyApt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75C4DB061EAD584800337FA5 /* Build configuration list for PBXNativeTarget "myApt" */;
+			buildConfigurationList = 759D2FF11F60E4CB000A219B /* Build configuration list for PBXNativeTarget "MyApt" */;
 			buildPhases = (
-				EE81D83DC2D1F6D7919D42F6 /* [CP] Check Pods Manifest.lock */,
-				75C4DAF01EAD584800337FA5 /* Sources */,
-				75C4DAF11EAD584800337FA5 /* Frameworks */,
-				75C4DAF21EAD584800337FA5 /* Resources */,
-				5C00295E37AC40BD8D6E5DC8 /* [CP] Embed Pods Frameworks */,
-				4C7285DD1E6D14DF69656DFA /* [CP] Copy Pods Resources */,
+				759D2FE41F60E4CB000A219B /* [CP] Check Pods Manifest.lock */,
+				759D2FE51F60E4CB000A219B /* Sources */,
+				759D2FE91F60E4CB000A219B /* Frameworks */,
+				759D2FEB1F60E4CB000A219B /* Resources */,
+				759D2FEF1F60E4CB000A219B /* [CP] Embed Pods Frameworks */,
+				759D2FF01F60E4CB000A219B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = myApt;
+			name = MyApt;
 			productName = myApt;
-			productReference = 75C4DAF41EAD584800337FA5 /* myApt.app */;
+			productReference = 759D2FF41F60E4CB000A219B /* MyApt.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -124,14 +131,12 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Johnny Zhang";
 				TargetAttributes = {
-					75C4DAF31EAD584800337FA5 = {
-						CreatedOnToolsVersion = 8.3.2;
+					759D2FE31F60E4CB000A219B = {
 						DevelopmentTeam = 28T772QNRV;
-						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 75C4DAEF1EAD584800337FA5 /* Build configuration list for PBXProject "myApt" */;
+			buildConfigurationList = 75C4DAEF1EAD584800337FA5 /* Build configuration list for PBXProject "MyApt" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -144,56 +149,26 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				75C4DAF31EAD584800337FA5 /* myApt */,
+				759D2FE31F60E4CB000A219B /* MyApt */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		75C4DAF21EAD584800337FA5 /* Resources */ = {
+		759D2FEB1F60E4CB000A219B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75C4DB021EAD584800337FA5 /* LaunchScreen.storyboard in Resources */,
-				75C4DAFF1EAD584800337FA5 /* Assets.xcassets in Resources */,
-				7506C86D1EAD5A0B00569EB1 /* GoogleService-Info.plist in Resources */,
+				759D2FEC1F60E4CB000A219B /* LaunchScreen.storyboard in Resources */,
+				759D2FED1F60E4CB000A219B /* Assets.xcassets in Resources */,
+				759D2FEE1F60E4CB000A219B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4C7285DD1E6D14DF69656DFA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-myApt/Pods-myApt-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5C00295E37AC40BD8D6E5DC8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-myApt/Pods-myApt-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EE81D83DC2D1F6D7919D42F6 /* [CP] Check Pods Manifest.lock */ = {
+		759D2FE41F60E4CB000A219B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -208,16 +183,46 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		759D2FEF1F60E4CB000A219B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyApt/Pods-MyApt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		759D2FF01F60E4CB000A219B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyApt/Pods-MyApt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		75C4DAF01EAD584800337FA5 /* Sources */ = {
+		759D2FE51F60E4CB000A219B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75C4DAF81EAD584800337FA5 /* AppDelegate.swift in Sources */,
-				7506C86B1EAD595300569EB1 /* SwitchViewController.swift in Sources */,
-				7506C8691EAD594E00569EB1 /* LogCollectionViewController.swift in Sources */,
+				759D2FE61F60E4CB000A219B /* AppDelegate.swift in Sources */,
+				759D2FE71F60E4CB000A219B /* SwitchViewController.swift in Sources */,
+				759D2FE81F60E4CB000A219B /* LogCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +240,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		759D2FF21F60E4CB000A219B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 929D4734D2435C7159E2F2BA /* Pods-MyApt.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 28T772QNRV;
+				INFOPLIST_FILE = "myApt copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JohnnyZhang.myApt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		759D2FF31F60E4CB000A219B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F674261C1453CEFC2E01C18 /* Pods-MyApt.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 28T772QNRV;
+				INFOPLIST_FILE = "myApt copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JohnnyZhang.myApt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		75C4DB041EAD584800337FA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -289,7 +322,7 @@
 		};
 		75C4DB051EAD584800337FA5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E017781B408644E76DDDC30C /* Pods-myApt.release.xcconfig */;
+			baseConfigurationReference = 5F674261C1453CEFC2E01C18 /* Pods-MyApt.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -333,51 +366,23 @@
 			};
 			name = Release;
 		};
-		75C4DB071EAD584800337FA5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABA36F73C9F3BC3A75CC3C1D /* Pods-myApt.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 28T772QNRV;
-				INFOPLIST_FILE = myApt/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.JohnnyZhang.myApt;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		75C4DB081EAD584800337FA5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E017781B408644E76DDDC30C /* Pods-myApt.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 28T772QNRV;
-				INFOPLIST_FILE = myApt/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.JohnnyZhang.myApt;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		75C4DAEF1EAD584800337FA5 /* Build configuration list for PBXProject "myApt" */ = {
+		759D2FF11F60E4CB000A219B /* Build configuration list for PBXNativeTarget "MyApt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75C4DB041EAD584800337FA5 /* Debug */,
-				75C4DB051EAD584800337FA5 /* Release */,
+				759D2FF21F60E4CB000A219B /* Debug */,
+				759D2FF31F60E4CB000A219B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75C4DB061EAD584800337FA5 /* Build configuration list for PBXNativeTarget "myApt" */ = {
+		75C4DAEF1EAD584800337FA5 /* Build configuration list for PBXProject "MyApt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75C4DB071EAD584800337FA5 /* Debug */,
-				75C4DB081EAD584800337FA5 /* Release */,
+				75C4DB041EAD584800337FA5 /* Debug */,
+				75C4DB051EAD584800337FA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_myAptVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_myAptVersionString[];
+FOUNDATION_EXPORT double Pods_MyAptVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_MyAptVersionString[];
 

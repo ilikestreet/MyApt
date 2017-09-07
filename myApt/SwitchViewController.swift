@@ -14,7 +14,7 @@ import FirebaseDatabase
 class SwitchViewController: UIViewController {
     
     var userID: String!
-    var ref: FIRDatabaseReference!
+    var ref: DatabaseReference!
     var fanStatus: Int = -1
     
     let logController = LogCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
@@ -85,11 +85,7 @@ class SwitchViewController: UIViewController {
     
    override func viewDidLoad() {
         super.viewDidLoad()
-    
 
-        contentView.backgroundColor = customBackground
-        view.backgroundColor = customBackground
-    
         view.addSubview(contentView)
         contentView.addSubview(lightLabel)
         contentView.addSubview(fanLabel)
@@ -103,7 +99,6 @@ class SwitchViewController: UIViewController {
         setupFanStatusLabelViewConstraint()
         fanStatusLabel.text = String(fanStatus)
 
-    
         setupNetwork()
         setupLightSwitch()
         setupGesture()
@@ -116,14 +111,14 @@ class SwitchViewController: UIViewController {
         let password = "Abc110110119"
         
         
-        FIRAuth.auth()?.signIn(withEmail: email, password: password) { (user, error) in
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             //Print into the console if successfully logged in
             print("You have successfully logged in")
 
         }
         
-        userID = FIRAuth.auth()?.currentUser?.uid
-        ref = FIRDatabase.database().reference().child(self.userID)
+        userID = Auth.auth().currentUser?.uid
+        ref = Database.database().reference().child(self.userID)
         
         
 
@@ -133,9 +128,23 @@ class SwitchViewController: UIViewController {
         let checkingAlert = UIAlertController(title: "Checking Status", message: "Please wait", preferredStyle: .alert)
         self.present(checkingAlert, animated: true, completion: nil)
         
-        ref.child("lastLightCommand").observe(FIRDataEventType.value, with: { (snapshot) in
+        ref.child("lastLightCommand").observe(DataEventType.value, with: { (snapshot) in
             if let value = snapshot.value as? String {
                 self.lightSwitch.setOn(value == "LIGHT ON", animated: true)
+                if self.lightSwitch.isOn {
+                    self.contentView.backgroundColor = self.customBackground
+                    self.view.backgroundColor = self.customBackground
+                    self.lightLabel.textColor = UIColor.black
+                    self.fanLabel.textColor = UIColor.black
+                    self.fanStatusLabel.textColor = UIColor.black
+                }
+                else {
+                    self.contentView.backgroundColor = UIColor.black
+                    self.view.backgroundColor = UIColor.black
+                    self.lightLabel.textColor = self.customBackground
+                    self.fanLabel.textColor = self.customBackground
+                    self.fanStatusLabel.textColor = self.customBackground
+                }
             }
         })
         
