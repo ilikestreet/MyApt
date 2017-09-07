@@ -1,2 +1,2 @@
-# myApt
+# MyApt
 Home automation IOS client
