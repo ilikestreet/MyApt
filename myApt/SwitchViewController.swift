@@ -13,7 +13,7 @@ import FirebaseDatabase
 
 class SwitchViewController: UIViewController {
     
-    var userID: String!
+    var userID = "jIj7eJqShJhw5yI2760DHFFGguf1"
     var ref: DatabaseReference!
     var fanStatus: Int = -1
     
@@ -117,7 +117,7 @@ class SwitchViewController: UIViewController {
 
         }
         
-        userID = Auth.auth().currentUser?.uid
+//        userID = Auth.auth().currentUser?.uid
         ref = Database.database().reference().child(self.userID)
         
         

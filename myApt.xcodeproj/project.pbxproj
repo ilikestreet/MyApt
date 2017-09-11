@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		754934631F629E7F005DC768 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75C4DB031EAD584800337FA5 /* Info.plist */; };
 		759D2FE61F60E4CB000A219B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C4DAF71EAD584800337FA5 /* AppDelegate.swift */; };
 		759D2FE71F60E4CB000A219B /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7506C86A1EAD595300569EB1 /* SwitchViewController.swift */; };
 		759D2FE81F60E4CB000A219B /* LogCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7506C8681EAD594E00569EB1 /* LogCollectionViewController.swift */; };
@@ -160,7 +159,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				754934631F629E7F005DC768 /* Info.plist in Resources */,
 				759D2FEC1F60E4CB000A219B /* LaunchScreen.storyboard in Resources */,
 				759D2FED1F60E4CB000A219B /* Assets.xcassets in Resources */,
 				759D2FEE1F60E4CB000A219B /* GoogleService-Info.plist in Resources */,
@@ -253,6 +251,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.JohnnyZhang.myApt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -267,6 +266,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.JohnnyZhang.myApt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
