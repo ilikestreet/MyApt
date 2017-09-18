@@ -14,11 +14,11 @@ class LogCollectionViewController: UICollectionViewController, UICollectionViewD
     
     
     
-    public var commandArray = [String]()
+    @objc public var commandArray = [String]()
     
 
    
-    func handleRightEdgeSwipe(gesture: UIScreenEdgePanGestureRecognizer) {
+    @objc func handleRightEdgeSwipe(gesture: UIScreenEdgePanGestureRecognizer) {
         if gesture.state == .recognized{
             let transition = CATransition()
             transition.duration = 0.5
@@ -87,7 +87,7 @@ class LogCollectionViewController: UICollectionViewController, UICollectionViewD
             let size = CGSize(width: view.frame.width, height: 1000)
             let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
             
-            let estimatedFrame = NSString(string: commandText).boundingRect(with: size, options: options, attributes: [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 26)], context: nil)
+            let estimatedFrame = NSString(string: commandText).boundingRect(with: size, options: options, attributes: [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 26)], context: nil)
             
             return CGSize(width: view.frame.width, height: estimatedFrame.height + 20)
         }
@@ -98,7 +98,7 @@ class LogCollectionViewController: UICollectionViewController, UICollectionViewD
 
 class LogCell: BaseCell {
     
-    let logTextView: UITextView = {
+    @objc let logTextView: UITextView = {
         let textView = UITextView()
         textView.font = UIFont.boldSystemFont(ofSize: 26)
         textView.text = ""
@@ -117,7 +117,7 @@ class LogCell: BaseCell {
         
     }
     
-    func setupLogTextViewConstraints() {
+    @objc func setupLogTextViewConstraints() {
         addConstraintsWithFormat(format: "H:|[v0]|", views: logTextView)
         addConstraintsWithFormat(format: "V:|[v0]|", views: logTextView)
     }
@@ -133,7 +133,7 @@ class BaseCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupView() {}
+    @objc func setupView() {}
 }
 
 extension UIView{

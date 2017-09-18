@@ -13,14 +13,24 @@ import FirebaseDatabase
 
 class SwitchViewController: UIViewController {
     
-    var userID = "jIj7eJqShJhw5yI2760DHFFGguf1"
-    var ref: DatabaseReference!
-    var fanStatus: Int = -1
+    @objc var userID = "jIj7eJqShJhw5yI2760DHFFGguf1"
+    @objc var ref: DatabaseReference!
+    @objc var fanStatus: Int = -1
     
-    let logController = LogCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
-    let customBackground = UIColor(red: 254, green: 255, blue: 237)
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        if !lightSwitch.isOn {
+            return .lightContent
+        }
+        else {
+            return .default
+        }
+    }
     
-    let contentView: UIView = {
+    
+    @objc let logController = LogCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
+    @objc let customBackground = UIColor(red: 254, green: 255, blue: 237)
+    
+    @objc let contentView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.clear
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -29,7 +39,7 @@ class SwitchViewController: UIViewController {
         return view
     }()
     
-    let lightLabel: UILabel = {
+    @objc let lightLabel: UILabel = {
         let label = UILabel()
         label.text = "Light:"
         label.textColor = UIColor.black
@@ -40,7 +50,7 @@ class SwitchViewController: UIViewController {
         return label
     }()
     
-    let fanLabel: UILabel = {
+    @objc let fanLabel: UILabel = {
         let label = UILabel()
         label.text = "Fan:"
         label.textColor = UIColor.black
@@ -51,7 +61,7 @@ class SwitchViewController: UIViewController {
         return label
     }()
     
-    let lightSwitch: UISwitch = {
+    @objc let lightSwitch: UISwitch = {
        let sw = UISwitch()
 //        sw.backgroundColor = UIColor.red
         sw.isUserInteractionEnabled = false
@@ -59,7 +69,7 @@ class SwitchViewController: UIViewController {
         return sw
     }()
     
-    let fanStatusLabel: UILabel = {
+    @objc let fanStatusLabel: UILabel = {
         let label = UILabel()
         label.text = ""
         label.textColor = UIColor.black
@@ -106,7 +116,7 @@ class SwitchViewController: UIViewController {
     }
     
     
-    func setupNetwork(){
+    @objc func setupNetwork(){
         let email = "ilikestreet.jz@gmail.com"
         let password = "Abc110110119"
         
@@ -124,7 +134,8 @@ class SwitchViewController: UIViewController {
 
     }
 
-    func setupLightSwitch() {
+    
+    @objc func setupLightSwitch() {
         let checkingAlert = UIAlertController(title: "Checking Status", message: "Please wait", preferredStyle: .alert)
         self.present(checkingAlert, animated: true, completion: nil)
         
@@ -137,6 +148,7 @@ class SwitchViewController: UIViewController {
                     self.lightLabel.textColor = UIColor.black
                     self.fanLabel.textColor = UIColor.black
                     self.fanStatusLabel.textColor = UIColor.black
+                    self.setNeedsStatusBarAppearanceUpdate()
                 }
                 else {
                     self.contentView.backgroundColor = UIColor.black
@@ -144,6 +156,7 @@ class SwitchViewController: UIViewController {
                     self.lightLabel.textColor = self.customBackground
                     self.fanLabel.textColor = self.customBackground
                     self.fanStatusLabel.textColor = self.customBackground
+                    self.setNeedsStatusBarAppearanceUpdate()
                 }
             }
         })
@@ -156,7 +169,7 @@ class SwitchViewController: UIViewController {
         
     
     
-    func setupGesture() {
+    @objc func setupGesture() {
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeAction))
         leftSwipe.direction = .left
         view.addGestureRecognizer(leftSwipe)
@@ -176,7 +189,7 @@ class SwitchViewController: UIViewController {
     
         
     
-    func setupContentViewConstraint() {
+    @objc func setupContentViewConstraint() {
         // x, y, width, height
         contentView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         contentView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
@@ -184,7 +197,7 @@ class SwitchViewController: UIViewController {
         contentView.heightAnchor.constraint(equalToConstant: 120).isActive = true
     }
     
-    func setupLightLabelViewConstraint() {
+    @objc func setupLightLabelViewConstraint() {
         // x, y, width, height
         lightLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
         lightLabel.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
@@ -193,13 +206,13 @@ class SwitchViewController: UIViewController {
     }
     
     
-    func setupLightSwitchViewConstraint() {
+    @objc func setupLightSwitchViewConstraint() {
         // x, y, width, height
         lightSwitch.leftAnchor.constraint(equalTo: lightLabel.rightAnchor, constant: 55).isActive = true
         lightSwitch.topAnchor.constraint(equalTo: lightLabel.topAnchor, constant: 15).isActive = true
     }
     
-    func setupFanLabelViewConstraint() {
+    @objc func setupFanLabelViewConstraint() {
         // x, y, width, height
         fanLabel.leftAnchor.constraint(equalTo: lightLabel.leftAnchor).isActive = true
         fanLabel.topAnchor.constraint(equalTo: lightLabel.bottomAnchor).isActive = true
@@ -207,7 +220,7 @@ class SwitchViewController: UIViewController {
         fanLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1/2).isActive = true
     }
     
-    func setupFanStatusLabelViewConstraint() {
+    @objc func setupFanStatusLabelViewConstraint() {
         // x, y, width, height
         fanStatusLabel.leftAnchor.constraint(equalTo: fanLabel.rightAnchor).isActive = true
         fanStatusLabel.topAnchor.constraint(equalTo: fanLabel.topAnchor).isActive = true
@@ -215,7 +228,7 @@ class SwitchViewController: UIViewController {
         fanStatusLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1/2).isActive = true
     }
     
-    func handleSwipeAction(swipe: UISwipeGestureRecognizer) {
+    @objc func handleSwipeAction(swipe: UISwipeGestureRecognizer) {
         if swipe.direction == .left && lightSwitch.isOn {
             //  Light Off
             ref.updateChildValues(["Command" : "LIGHT OFF"])
@@ -233,7 +246,7 @@ class SwitchViewController: UIViewController {
         
     }
     
-    func handleOneFingerTap(sender: UITapGestureRecognizer) {
+    @objc func handleOneFingerTap(sender: UITapGestureRecognizer) {
         fanStatus += 1
         switch fanStatus {
             case 0:
@@ -259,7 +272,7 @@ class SwitchViewController: UIViewController {
     }
     
     
-    func getLogFromFirebase(){
+    @objc func getLogFromFirebase(){
 
         ref.child("Log").observeSingleEvent(of: .value, with: { (snapshot) in
             if let dic = snapshot.value as? NSDictionary {
@@ -277,7 +290,7 @@ class SwitchViewController: UIViewController {
         })
     }
     
-    func handleSwipeLeftEdge(gesture: UIScreenEdgePanGestureRecognizer) {
+    @objc func handleSwipeLeftEdge(gesture: UIScreenEdgePanGestureRecognizer) {
         if gesture.state == .recognized {
             let transition = CATransition()
             transition.duration = 0.5
@@ -292,8 +305,8 @@ class SwitchViewController: UIViewController {
 }
 
 extension UIColor{
-    convenience init(red: Float, green: Float, blue: Float) {
-        self.init(colorLiteralRed: red/255, green: green/255, blue: blue/255, alpha: 1)
+    @objc convenience init(red: Float, green: Float, blue: Float) {
+        self.init(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: CGFloat(1))
     }
 }
 

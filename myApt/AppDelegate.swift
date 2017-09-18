@@ -14,7 +14,7 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var switchViewController: SwitchViewController!
+    @objc var switchViewController: SwitchViewController!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -25,13 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         switchViewController = SwitchViewController()
         let mainNavController = UINavigationController(rootViewController: switchViewController)
-        
         mainNavController.isNavigationBarHidden = true
         window?.rootViewController = mainNavController
-        
-        
         window?.makeKeyAndVisible()
-
+        
         return true
     }
 
