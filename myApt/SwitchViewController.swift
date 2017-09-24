@@ -16,17 +16,6 @@ class SwitchViewController: UIViewController {
     @objc var userID = "jIj7eJqShJhw5yI2760DHFFGguf1"
     @objc var ref: DatabaseReference!
     @objc var fanStatus: Int = -1
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        if !lightSwitch.isOn {
-            return .lightContent
-        }
-        else {
-            return .default
-        }
-    }
-    
-    
     @objc let logController = LogCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
     @objc let customBackground = UIColor(red: 254, green: 255, blue: 237)
     
@@ -86,12 +75,6 @@ class SwitchViewController: UIViewController {
         getLogFromFirebase()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        UIApplication.shared.statusBarStyle = .default
-    }
-
     
    override func viewDidLoad() {
         super.viewDidLoad()
@@ -148,6 +131,7 @@ class SwitchViewController: UIViewController {
                     self.lightLabel.textColor = UIColor.black
                     self.fanLabel.textColor = UIColor.black
                     self.fanStatusLabel.textColor = UIColor.black
+                    UIApplication.shared.statusBarStyle = .default
                     self.setNeedsStatusBarAppearanceUpdate()
                 }
                 else {
@@ -156,6 +140,7 @@ class SwitchViewController: UIViewController {
                     self.lightLabel.textColor = self.customBackground
                     self.fanLabel.textColor = self.customBackground
                     self.fanStatusLabel.textColor = self.customBackground
+                    UIApplication.shared.statusBarStyle = .lightContent
                     self.setNeedsStatusBarAppearanceUpdate()
                 }
             }
