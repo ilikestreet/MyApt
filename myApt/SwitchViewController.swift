@@ -278,8 +278,8 @@ class SwitchViewController: UIViewController {
     @objc func handleSwipeLeftEdge(gesture: UIScreenEdgePanGestureRecognizer) {
         if gesture.state == .recognized {
             let transition = CATransition()
-            transition.duration = 0.5
-            transition.type = kCATransitionFade
+            transition.duration = 0.3
+            transition.type = kCATransitionPush
             transition.subtype = kCATransitionFromLeft
             self.navigationController?.view.layer.add(transition, forKey: nil)
             self.navigationController?.pushViewController(logController, animated: false)
