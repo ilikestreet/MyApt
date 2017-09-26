@@ -207,7 +207,7 @@ class SwitchViewController: UIViewController {
     
     @objc func setupFanStatusLabelViewConstraint() {
         // x, y, width, height
-        fanStatusLabel.leftAnchor.constraint(equalTo: fanLabel.rightAnchor).isActive = true
+        fanStatusLabel.centerXAnchor.constraint(equalTo: lightSwitch.centerXAnchor).isActive = true
         fanStatusLabel.topAnchor.constraint(equalTo: fanLabel.topAnchor).isActive = true
         fanStatusLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1/2).isActive = true
         fanStatusLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1/2).isActive = true
