@@ -256,16 +256,32 @@ class SwitchViewController: UIViewController {
         fanStatusLabel.text = String(fanStatus)
     }
     
+    func getDateStringFromLog(logString: String) -> String {
+        let pattern = "\\d\\d\\d\\d-\\d\\d-\\d\\d\\s\\d\\d:\\d\\d:\\d\\d"
+        let regex = try! NSRegularExpression(pattern: pattern, options: [])
+        let firstMatch = regex.firstMatch(in: logString, options: [], range: NSMakeRange(0, logString.count))
+        if let match = firstMatch {
+            let range = match.range(at:0)
+            if let dataRange = Range(range, in: logString) {
+                let dateString = logString[dataRange]
+                return String(dateString)
+            }
+            
+        }
+        return ""
+    }
     
     @objc func getLogFromFirebase(){
 
         ref.child("Log").observeSingleEvent(of: .value, with: { (snapshot) in
             if let dic = snapshot.value as? NSDictionary {
                 let logString = dic.map{"\($0):\($1)"}.joined(separator: "\n")
-                let dataArray = logString.characters.split { $0 == "\n" }.map(String.init)
+                let dataArray = logString.characters.split { $0 == "\n" }.map(String.init).sorted(by: >)
                 self.logController.commandArray = dataArray
                 self.logController.collectionView?.reloadData()
-
+                
+                
+                
                 
             }
             else {

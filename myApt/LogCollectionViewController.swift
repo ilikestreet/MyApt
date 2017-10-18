@@ -40,6 +40,7 @@ class LogCollectionViewController: UICollectionViewController, UICollectionViewD
             let lastItemIndex = NSIndexPath(item: item, section: 0) as IndexPath
             self.collectionView?.scrollToItem(at: lastItemIndex, at: UICollectionViewScrollPosition.bottom, animated: false)
         }
+        
         UIApplication.shared.statusBarStyle = .lightContent
     }
     
@@ -56,7 +57,6 @@ class LogCollectionViewController: UICollectionViewController, UICollectionViewD
         let rightEdgeSwipe = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleRightEdgeSwipe(gesture:)))
         rightEdgeSwipe.edges = .right
         view.addGestureRecognizer(rightEdgeSwipe)
-        
         
         collectionView?.backgroundColor = UIColor.black
         self.collectionView!.register(LogCell.self, forCellWithReuseIdentifier: cellID)        
