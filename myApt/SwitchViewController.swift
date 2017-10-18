@@ -276,8 +276,11 @@ class SwitchViewController: UIViewController {
         ref.child("Log").observeSingleEvent(of: .value, with: { (snapshot) in
             if let dic = snapshot.value as? NSDictionary {
                 let logString = dic.map{"\($0):\($1)"}.joined(separator: "\n")
-                let dataArray = logString.characters.split { $0 == "\n" }.map(String.init).sorted(by: >)
-                self.logController.commandArray = dataArray
+                let dataArray = logString.characters.split { $0 == "\n" }.map(String.init)
+                let sortedDataArray = dataArray.sorted(by: { (item1, item2) -> Bool in
+                    return self.getDateStringFromLog(logString: item1) > self.getDateStringFromLog(logString: item2)
+                })
+                self.logController.commandArray = sortedDataArray
                 self.logController.collectionView?.reloadData()
                 
                 
